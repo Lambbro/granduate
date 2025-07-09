@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Celebration | Class of 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a2463;
+            --secondary: #ffd700;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .great-vibes {
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e3c72 100%);
+        }
+        
+        .invitation-card {
+            background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 36, 99, 0.7);
+        }
+        
+        .invitation-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        .animate-delay-1 {
+            animation-delay: 0.3s;
+        }
+        
+        .animate-delay-2 {
+            animation-delay: 0.6s;
+        }
+        
+        .animate-delay-3 {
+            animation-delay: 0.9s;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Message carousel */
+        .message-carousel {
+            perspective: 1000px;
+        }
+        
+        .message {
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .message.active {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+        
+        .message.inactive {
+            transform: rotateY(90deg);
+            opacity: 0;
+            position: absolute;
+        }
+        
+        /* Share buttons */
+        .share-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .invitation-card {
+                margin: 0 -1rem;
+                border-radius: 0;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2 animate-fadeInUp">Graduation Celebration</h1>
+        <p class="text-xl md:text-2xl text-yellow-300 animate-fadeInUp animate-delay-1">Class of 2025</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Section 1: Invitation Card -->
+        <section class="mb-20">
+            <div class="invitation-card p-8 md:p-12 text-white text-center animate-fadeInUp">
+                <div class="invitation-content">
+                    <div class="mb-8 animate-fadeInUp animate-delay-1">
+                        <p class="text-yellow-300 mb-2">You're cordially invited to celebrate</p>
+                        <h2 class="great-vibes text-5xl md:text-7xl text-yellow-300 mb-4">Nguyen Quang Anh</h2>
+                        <p class="text-xl">on my graduation from</p>
+                        <h3 class="text-2xl md:text-3xl font-bold mt-2">Hanoi Open University</h3>
+                    </div>
+                    
+                    <div class="mb-8 animate-fadeInUp animate-delay-2">
+                        <div class="flex justify-center items-center mb-6">
+                            <div class="w-16 h-1 bg-yellow-300 mx-4"></div>
+                            <i class="fas fa-graduation-cap text-3xl text-yellow-300 animate-float"></i>
+                            <div class="w-16 h-1 bg-yellow-300 mx-4"></div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <p class="text-yellow-300 font-semibold">Date</p>
+                                <p>July 10, 2025</p>
+                            </div>
+                            <div>
+                                <p class="text-yellow-300 font-semibold">Time</p>
+                                <p>9:30 PM</p>
+                            </div>
+                            <div>
+                                <p class="text-yellow-300 font-semibold">Place</p>
+                                <p>Vietnam-Soviet Union Friendship Cultural Palace</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fadeInUp animate-delay-3">
+                        <p class="italic mb-6">"The future belongs to those who believe in the beauty of their dreams."</p>
+                        <button class="bg-yellow-300 text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition duration-300">
+                            RSVP Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Congratulatory Messages -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Congratulations Messages</h2>
+            
+            <div class="message-carousel relative h-64 md:h-48">
+                <!-- Message 1 (Active by default) -->
+                <div class="message active p-6 bg-white rounded-lg shadow-lg text-center">
+                    <p class="text-lg italic mb-4">"Congratulations on your remarkable achievement. May your graduation be just the beginning of a future filled with success, happiness, and continued growth."</p>
+                    <p class="font-bold text-blue-900">- Nguyen Quang Anh</p>
+                </div>
+                
+                <!-- Message 2 -->
+                <div class="message inactive p-6 bg-white rounded-lg shadow-lg text-center">
+                    <p class="text-lg italic mb-4">"Wishing you every success in your future endeavors. Your hard work and dedication have truly paid off—congratulations on your graduation!"</p>
+                    <p class="font-bold text-blue-900">- Nguyen Quang Anh</p>
+                </div>
+                
+                <!-- Message 3 -->
+                <div class="message inactive p-6 bg-white rounded-lg shadow-lg text-center">
+                    <p class="text-lg italic mb-4">"As you graduate, may you be proud of your accomplishments and confident in your journey ahead. Best wishes for a bright and prosperous future."</p>
+                    <p class="font-bold text-blue-900">- Nguyen Quang Anh</p>
+                </div>
+                <!-- Message 4 -->
+                <div class="message inactive p-6 bg-white rounded-lg shadow-lg text-center">
+                    <p class="text-lg italic mb-4">"Your graduation marks a significant milestone. May it be a stepping stone to a fulfilling career and a life full of purpose and achievement.</p>
+                    <p class="font-bold text-blue-900">- Nguyen Quang Anh</p>
+                </div>
+                <!-- Message 5 -->
+                <div class="message inactive p-6 bg-white rounded-lg shadow-lg text-center">
+                    <p class="text-lg italic mb-4">"Warmest congratulations on your graduation. May this moment of pride be the foundation of a future filled with endless possibilities and meaningful success."</p>
+                    <p class="font-bold text-blue-900">- Nguyen Quang Anh</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mt-6">
+                <button id="prevBtn" class="mx-2 p-2 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" class="mx-2 p-2 rounded-full bg-blue-900 text-white hover:bg-blue-800 transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 3: Google Maps -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">Ceremony Location</h2>
+            
+            <div class="map-container rounded-lg overflow-hidden shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4428.892475592412!2d105.84403927760128!3d21.023088668119758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab01cc0afc49%3A0x9d0611b9184551db!2zQ1VORyBWxIJOIEjDk0EgTEFPIMSQ4buYTkcgSOG7rlUgTkdI4buKIFZJ4buGVCBYw5Q!5e0!3m2!1sen!2s!4v1752051536301!5m2!1sen!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-6">Share This Celebration</h3>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" 
+                   target="_blank" 
+                   class="share-btn bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20graduation%20announcement&url=example.com" 
+                   target="_blank" 
+                   class="share-btn bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                
+                <a href="#" 
+                   class="share-btn bg-green-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-700" 
+                   id="zaloShare">
+                    <i class="fas fa-comment-dots text-xl"></i>
+                </a>
+                
+                <button id="copyLinkBtn" 
+                        class="share-btn bg-yellow-300 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center hover:bg-yellow-400">
+                    <i class="fas fa-link text-xl"></i>
+                </button>
+            </div>
+            
+            <p class="text-yellow-300 mb-4">© 2025 Graduation Celebration</p>
+            <p class="text-sm opacity-75">Designed with love for Lamb's graduate</p>
+        </div>
+    </footer>
+
+    <script>
+        // Message Carousel
+        const messages = document.querySelectorAll('.message');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        
+        function showMessage(index) {
+            messages.forEach((message, i) => {
+                if (i === index) {
+                    message.classList.remove('inactive');
+                    message.classList.add('active');
+                } else {
+                    message.classList.remove('active');
+                    message.classList.add('inactive');
+                }
+            });
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + messages.length) % messages.length;
+            showMessage(currentIndex);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % messages.length;
+            showMessage(currentIndex);
+        });
+        
+        // Auto-rotate messages every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % messages.length;
+            showMessage(currentIndex);
+        }, 5000);
+        
+        // Copy Link functionality
+        const copyLinkBtn = document.getElementById('copyLinkBtn');
+        copyLinkBtn.addEventListener('click', () => {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const originalHTML = copyLinkBtn.innerHTML;
+                copyLinkBtn.innerHTML = '<i class="fas fa-check"></i>';
+                copyLinkBtn.classList.add('bg-green-500');
+                copyLinkBtn.classList.remove('bg-yellow-300');
+                
+                setTimeout(() => {
+                    copyLinkBtn.innerHTML = originalHTML;
+                    copyLinkBtn.classList.remove('bg-green-500');
+                    copyLinkBtn.classList.add('bg-yellow-300');
+                }, 2000);
+            });
+        });
+        
+        // Zalo share (simulated)
+        document.getElementById('zaloShare').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Zalo sharing would be implemented here with the proper SDK');
+        });
+        
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-fadeInUp');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
