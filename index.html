@@ -159,7 +159,12 @@
                         <p class="text-xl">on my graduation from</p>
                         <h3 class="text-2xl md:text-3xl font-bold mt-2">Hanoi Open University</h3>
                     </div>
-                    
+                    <div class="mt-10 flex flex-col items-center animate-fadeInUp animate-delay-3">
+                        <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t39.30808-6/501183400_2082523935602412_4823537757741698554_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeG78YXjztPQSsVukiRYVCM4g_xXLSd_i3uD_FctJ3-Le6-jtaq_085ws8iWQa11lY4ggNtxsP5l_zTjoL8-dgpa&_nc_ohc=ux18t-9q4x0Q7kNvwE9r82q&_nc_oc=AdnfYqORRu7IBoFKMOgnsQZ-8ezhH3ujnVdglvd9r5a7zEZnVODw6AljhPTpb4hBK9A&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&_nc_gid=gnKrtFaQX57vrFWQY6bxZw&oh=00_AfQSpJUHpHGXl4MCveHTdlGeEA1lSyEodL3K4HUlGjvsSg&oe=68741ED3" 
+                        alt="Graduate Avatar" 
+                        class="w-32 h-32 rounded-full border-4 border-yellow-300 shadow-lg mb-4 object-cover">
+                        <p class="italic mb-6">"I'm <span class="font-bold text-yellow-300">Nguyen Quang Anh</span>, thank you for being a part of this memorable milestone!"</p>
+                    </div>
                     <div class="mb-8 animate-fadeInUp animate-delay-2">
                         <div class="flex justify-center items-center mb-6">
                             <div class="w-16 h-1 bg-yellow-300 mx-4"></div>
@@ -184,10 +189,10 @@
                     </div>
                     
                     <div class="animate-fadeInUp animate-delay-3">
-                        <p class="italic mb-6">"The future belongs to those who believe in the beauty of their dreams."</p>
-                        <button class="bg-yellow-300 text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition duration-300">
+                        
+                        <a href="mailto:ngquanganh11a1@gmail.com" class="bg-yellow-300 text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition duration-300">
                             RSVP Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -259,19 +264,19 @@
             <h3 class="text-2xl font-bold mb-6">Share This Celebration</h3>
             
             <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" 
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://lambbro.github.io/granduate/" 
                    target="_blank" 
                    class="share-btn bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700">
                     <i class="fab fa-facebook-f text-xl"></i>
                 </a>
                 
-                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20graduation%20announcement&url=example.com" 
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20graduation%20announcement&url=https://lambbro.github.io/granduate/" 
                    target="_blank" 
                    class="share-btn bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500">
                     <i class="fab fa-twitter text-xl"></i>
                 </a>
                 
-                <a href="#" 
+                <a href="https://lambbro.github.io/granduate/" 
                    class="share-btn bg-green-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-700" 
                    id="zaloShare">
                     <i class="fas fa-comment-dots text-xl"></i>
@@ -339,12 +344,6 @@
                     copyLinkBtn.classList.add('bg-yellow-300');
                 }, 2000);
             });
-        });
-        
-        // Zalo share (simulated)
-        document.getElementById('zaloShare').addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Zalo sharing would be implemented here with the proper SDK');
         });
         
         // Scroll animations
